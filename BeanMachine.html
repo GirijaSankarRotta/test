@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>The Starbuzz Bean Machine</title>
+	<link rel="stylesheet" type="text/css" href="BeanMachine.css">
+</head>
+<body>
+	<h1>The Starbuzz Bean Machine</h1>
+	<h2>Fill out hte form below and click "order now" to order</h2>
+	<form action="http://localhost/PHP_Programs/chapter14/starbuzz/processorder.php" method="POST">
+	<fieldset>
+	<legend>Order details</legend>
+	<div class="tableRow">
+		<label for="beans">Choose your beans: </label>
+			<select name="beans" id="beans">
+				<option value="House Blend">House Blend</option>
+				<option value="Bolivia">Shade Grown Bolivia Supremo</option>
+				<option value="Guatemala">Organic Guatemala</option>
+				<option value="Kenya">Kenya</option>
+			</select>
+	</div>
+	<div class="tableRow">
+		<label>Type:</label>
+		<p>
+			<input type="radio" name="beantype" value="whole" id="whole_bean"> 
+			<label for="whole_bean">Whole bean</label><br>
+			<input type="radio" name="beantype" value="ground" id="ground_bean" checked>
+			<label for="ground_bean">Ground</label>
+		</p>
+	</div>
+	<div class="tableRow">
+		<label for="bags">Number of bags:</label>
+		<input type="number" name="bags" min="1" max="10" id="bags">
+	</div>
+	<div class="tableRow label">
+		<label for="date">Arrive by date:</label>
+		<input type="date" name="date" id="date">
+	</div>
+	<div class="tableRow">
+		<label>Extras: </label>
+		<p>
+			<input type="checkbox" name="extras[]" value="giftwrap" id="gift_wrap">
+			<label for="giftwrap"> Gift wrap</label><br>
+			<input type="checkbox" name="extras[]" value="catalog" id="catalog" checked>
+			<label for="catalog"> Include catalog with order</label>
+		</p>
+	</div>
+	</fieldset>
+	<fieldset>
+		<legend>Ship to:</legend>
+	<div class="tableRow">
+		<label for="name">Name: </label>
+		<input type="text" placeholder="Kiran Kumar" name="name" id="name" required>
+	</div>
+	<div class="tableRow">
+		<label for="address">Address: </label>
+		<input type="text" placeholder="Dabbi Street" name="address" id="address" required>
+	</div>
+	<div class="tableRow">
+		<label>City: </label>
+		<input type="text" placeholder="Salur" name="city" id="city" required>
+	</div>
+	<div class="tableRow">
+		<label>State: </label>
+		<input type="text" placeholder="Andhra Pradesh" name="state" id="state" required>
+	</div>
+	<div class="tableRow">
+		<label for="zip">Zip: </label>
+		<input type="text" placeholder="535591" name="zip" id="zip" required>
+	</div>
+	<div class="tableRow">
+		<label for="phone">Phone:</label>
+		<input type="tel" placeholder="9949014295" name="phone" id="phone" required>
+	</div>
+	<div class="tableRow">
+		<label for="comments">Customer Comments:</label>
+		<textarea name="comments" id="comments"></textarea>
+	</div>
+	<div class="tableRow">
+		<label></label>
+		<input type="submit" value="Order Now">
+	</div>
+	</fieldset>
+	</form>
+
+</body>
+</html>
